@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\logowanieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +19,7 @@ Route::get('/', function () {
 }); */
 
 Route::get('/', function () {
-    return view('home');
+    return view('main');
 });
+Route::get('/logowanie', [logowanieController::class, 'viewLoginForm'])->name('login');
+Route::get('/rejestracja', [logowanieController::class, 'viewRegisterForm'])->name('register');
