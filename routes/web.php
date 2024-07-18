@@ -21,5 +21,12 @@ Route::get('/', function () {
 Route::get('/', function () {
     return view('main');
 });
-Route::get('/logowanie', [logowanieController::class, 'viewLoginForm'])->name('login');
-Route::get('/rejestracja', [logowanieController::class, 'viewRegisterForm'])->name('register');
+//Logowanie i rejestracja, i wylogowanie
+Route::get('login', [logowanieController::class, 'viewLoginForm'])->name('logowanie');
+Route::get('register', [logowanieController::class, 'viewRegisterForm'])->name('rejestracja');
+Route::post('logout', [LogowanieController::class, 'logout'])->name('wyloguj');
+Route::post('login', [LogowanieController::class, 'login'])->name('zaloguj');
+Route::post('register', [LogowanieController::class, 'register'])->name('zarejestruj');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware('auth');

@@ -14,8 +14,8 @@
 <body>
 <nav>
         <ul>
-             <li><a href="{{ route('login') }}">Logowanie</a></li>
-            <li><a href="{{ route('register') }}">Rejestracja</a></li>
+             <li><a href="{{ route('logowanie') }}">Logowanie</a></li>
+            <li><a href="{{ route('rejestracja') }}">Rejestracja</a></li>
            
         </ul>
     </nav>

@@ -4,7 +4,13 @@
 <h1>Logowanie</h1>
 @endsection
 @section ('content')
-    <form action="" method="POST">
+    @if (session('status'))
+        <div class="alert alert-success">
+            {{ session('status') }}
+        </div>
+        <br/>
+    @endif
+    <form action="{{ route('zaloguj') }}" method="POST">
     @csrf
     <label for="username">Nazwa użytkownika:</label><br/>
     <input type="text" name="username" id="username" required><br/>

@@ -4,20 +4,22 @@
 <h1>Rejestracja</h1>
 @endsection
 @section ('content')
-    <form action="" method="POST">
+    <form action="{{ route('zarejestruj') }}" method="POST">
         @csrf
         <label for="username">Nazwa użytkownika:</label><br/>
         <input type="text" name="username" id="username" required><br/>
+        <label for="email">Adres e-mail:</label><br/>
+        <input type="email" name="email" id="email" required><br/>
         <label for="password">Hasło:</label><br/>
         <input type="password" name="password" id="password" required><br/>
-        <label for="password_confirmation">Powtórz Hasło</label>
-        <input type="password" name="password_confirmation" id="password_confirmation" required><br/>`
+        <label for="password_confirmation">Powtórz Hasło:</label><br/>
+        <input type="password" name="password_confirmation" id="password_confirmation" required><br/>
         <label for="first_name">Imię</label><br/>
-        <input type="text" name="first_name" id="second_name"><br/>
+        <input type="text" name="first_name" id="first_name"><br/>
         <label for="last_name">Nazwisko</label><br/>
         <input type="text" name="last_name" id="last_name"><br/>
         <label for="accept">Akceptuję <a href="#">regulamin</a></label>
-        <input type="checkbox" name="accept" id="accept">
+        <input type="checkbox" name="accept" id="accept"><br/>
         <button type="submit">Zarejestruj</button>
     </form>
     @if ($errors->any())
@@ -28,4 +30,5 @@
             @endforeach
         </ul>
     </div>
+    @endif
 @endsection
