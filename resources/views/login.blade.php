@@ -18,4 +18,6 @@
     <input type="password" name="password" id="password" required><br/>
     <button type="submit">Zaloguj</button>
     </form>
+    <br/>
+    <p>Nie masz konta?<a href="{{ route('rejestracja') }}">Zarejestruj się!</a></p>
 @endsection

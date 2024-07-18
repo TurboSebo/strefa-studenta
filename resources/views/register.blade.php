@@ -31,4 +31,6 @@
         </ul>
     </div>
     @endif
+    <p>Masz już konto?<a href="{{ route('logowanie') }}">Zaloguj się!</a></p>
+
 @endsection

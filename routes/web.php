@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\logowanieController;
+use App\Http\Controllers\SesjaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,13 +21,11 @@ Route::get('/', function () {
 
 Route::get('/', function () {
     return view('main');
-});
+})->name('main');
 //Logowanie i rejestracja, i wylogowanie
 Route::get('login', [logowanieController::class, 'viewLoginForm'])->name('logowanie');
 Route::get('register', [logowanieController::class, 'viewRegisterForm'])->name('rejestracja');
 Route::post('logout', [LogowanieController::class, 'logout'])->name('wyloguj');
 Route::post('login', [LogowanieController::class, 'login'])->name('zaloguj');
 Route::post('register', [LogowanieController::class, 'register'])->name('zarejestruj');
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware('auth');
+Route::get('dashboard', [SesjaController::class, 'viewDashboard'])->middleware('auth')->name('dashboard');

@@ -9,16 +9,10 @@
     <meta name="keywords" content="laravel, aplikacja, pierwsza">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="reply-to" content="example@mail.com">
-    <title>@yield('title', 'My Laravel App')</title>
+    <title>@yield('title', 'Strefa Studenta')</title>
 </head>
 <body>
-<nav>
-        <ul>
-             <li><a href="{{ route('logowanie') }}">Logowanie</a></li>
-            <li><a href="{{ route('rejestracja') }}">Rejestracja</a></li>
-           
-        </ul>
-    </nav>
+    @include('layouts.nav-bar')
     <header>@yield('header')</header>
     
     <main>
