@@ -23,6 +23,7 @@ class User extends Authenticatable
         'password',
         'first_name',
         'last_name',
+        'about_me',
     ];
 
     /**
@@ -44,4 +45,15 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    //edycja profilu
+    
+    public function editProfile(array $data)
+    {
+        $this->update([
+            'first_name' => $data['first_name'],
+            'last_name' => $data['last_name'],
+            'about_me' => $data['about_me'],
+        ]);
+    }
 }

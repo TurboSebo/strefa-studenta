@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
             $table->date('date_of_birth')->nullable();
+            $table->text('about_me')->nullable()->limit(200);
             $table->boolean('czy_aktywne')->default(1);
             $table->rememberToken();
             $table->timestamps();

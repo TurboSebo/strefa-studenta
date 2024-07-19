@@ -12,4 +12,10 @@ class SesjaController extends Controller
         }
         return redirect('/');
     }
+    public function viewMyProfile(){
+       // if (auth()->check()) {
+            return view('profile');
+       // }
+       // return redirect('login');
+    }
 }

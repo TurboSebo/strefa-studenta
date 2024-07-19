@@ -29,3 +29,8 @@ Route::post('logout', [LogowanieController::class, 'logout'])->name('wyloguj');
 Route::post('login', [LogowanieController::class, 'login'])->name('zaloguj');
 Route::post('register', [LogowanieController::class, 'register'])->name('zarejestruj');
 Route::get('dashboard', [SesjaController::class, 'viewDashboard'])->middleware('auth')->name('dashboard');
+Route::get('profile', [SesjaController::class, 'viewMyProfile'])->name('myprofile');
+//edycja profili
+use App\Http\Controllers\EditProfileController;
+Route::get('editprofile', [EditProfileController::class, 'viewEditProfileForm'])->name('editprofile');
+Route::put('editprofile', [EditProfileController::class, 'updateProfileByUser'])->name('updateprofile');
