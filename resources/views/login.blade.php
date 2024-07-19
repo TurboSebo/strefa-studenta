@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section ('title', 'Rejestracja')
-@section ('header')
+@section ('caption')
 <h1>Logowanie</h1>
 @endsection
 @section ('content')

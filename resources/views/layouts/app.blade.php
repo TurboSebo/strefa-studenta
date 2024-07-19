@@ -12,10 +12,13 @@
     <title>@yield('title', 'Strefa Studenta')</title>
 </head>
 <body>
-    @include('layouts.nav-bar')
-    <header>@yield('header')</header>
     
+    <header>
+        <h1><a href="{{route('main')}}">Strefa Studenta</a></h1>
+    </header>
+    @include('layouts.nav-bar')
     <main>
+        @yield('caption')
         @yield('content')
     </main>
     <footer>
