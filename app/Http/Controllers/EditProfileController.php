@@ -19,9 +19,9 @@ class EditProfileController extends Controller
         
         //Walidacja danych
         $request->validate([
-            'first_name' => ['nullable', 'string', 'max:255'],
-            'last_name' => ['nullable', 'string', 'max:255'],
-            'about_me' => ['nullable', 'string', 'max:255'],
+            'first_name' => ['nullable', 'string', 'max:50'],
+            'last_name' => ['nullable', 'string', 'max:50'],
+            'about_me' => ['nullable', 'string', 'max:200'],
         ]);
         //przygotowanie danych do aktualizacji
         $data = $request->only(['first_name', 'last_name', 'about_me']);
