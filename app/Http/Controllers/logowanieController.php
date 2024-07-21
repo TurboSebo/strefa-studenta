@@ -26,7 +26,7 @@ class logowanieController extends Controller
         }
 
         return back()->withErrors([
-            'username' => 'The provided credentials do not match our records.',
+            'username' => 'Wprowadzone dane nie pasują do naszych rekordów.', // The provided credentials do not match our records.
         ]);
     }
     public function logout(Request $request)

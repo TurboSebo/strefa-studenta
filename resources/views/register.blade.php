@@ -3,7 +3,7 @@
 @section ('caption')
 <h1>Rejestracja</h1>
 @endsection
-@section ('content')
+@section ('main-content')
     <form action="{{ route('zarejestruj') }}" method="POST">
         @csrf
         <label for="username">Nazwa użytkownika:</label><br/>

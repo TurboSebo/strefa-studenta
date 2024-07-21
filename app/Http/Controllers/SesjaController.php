@@ -18,4 +18,7 @@ class SesjaController extends Controller
        // }
        // return redirect('login');
     }
+    public function viewSchools(){
+        return view('schools');
+    }
 }

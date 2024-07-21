@@ -3,7 +3,7 @@
 @section ('caption')
 <h1>Strona główna</h1>
 @endsection
-@section ('content')
+@section ('main-content')
 <p>Witaj na stronie głównej</p>
 <a href="#">Przeglądaj uczelnie</a>
 @endsection

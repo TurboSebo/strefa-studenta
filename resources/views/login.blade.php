@@ -3,7 +3,7 @@
 @section ('caption')
 <h1>Logowanie</h1>
 @endsection
-@section ('content')
+@section ('main-content')
     @if (session('status'))
         <div class="alert alert-success">
             {{ session('status') }}

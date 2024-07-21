@@ -19,7 +19,7 @@
     @include('layouts.nav-bar')
     <main>
         @yield('caption')
-        @yield('content')
+        @yield('main-content')
     </main>
     <footer>
         <!-- wspólna stópka -->

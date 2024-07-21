@@ -34,3 +34,6 @@ Route::get('profile', [SesjaController::class, 'viewMyProfile'])->name('myprofil
 use App\Http\Controllers\EditProfileController;
 Route::get('editprofile', [EditProfileController::class, 'viewEditProfileForm'])->name('editprofile');
 Route::put('editprofile', [EditProfileController::class, 'updateProfileByUser'])->name('updateprofile');
+//Route::get('editprofile/{id}', [EditProfileController::class, 'viewEditProfileForm'])->name('editprofile');
+
+Route::get('schools', [SesjaController::class, 'viewSchools'])->name('schools');

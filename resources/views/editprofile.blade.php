@@ -3,7 +3,7 @@
 @section ('caption')
 <h2>Edytuj profil</h2>
 @endsection
-@section ('content')
+@section ('main-content')
 <form action="{{ route('updateprofile') }}" method="POST">
     @csrf
     @method('PUT')
