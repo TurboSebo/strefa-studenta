@@ -18,6 +18,15 @@
     <input type="password" name="password" id="password" required><br/>
     <button type="submit">Zaloguj</button>
     </form>
+    @if ($errors->any())
+    <div class="alert alert-danger" style="color: red;">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li style="list-style-type: none;">{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
     <br/>
     <p>Nie masz konta?<a href="{{ route('rejestracja') }}">Zarejestruj się!</a></p>
 @endsection
